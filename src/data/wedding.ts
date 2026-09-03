@@ -57,21 +57,6 @@ export const weddingData = {
 
   events: [
     {
-      id: "mehendi",
-      name: "Mehendi",
-      dateLabel: "March 9, 2027",
-      time: "9:00 AM onwards",
-      venue: "316 Parkwood Dr",
-      location: "Aubrey, Texas",
-      address: "316 Parkwood Dr, Lakewood Village, TX 75068",
-      mapsQuery: "316 Parkwood Dr, Lakewood Village, TX 75068",
-      description:
-        "Join us for a joyful morning filled with vibrant colours, music, dance and henna as we kick off the wedding celebrations!",
-      attire: "Attire: Bright festive colours.",
-      motif: "mehendi" as const,
-      icon: "henna",
-    },
-    {
       id: "sangeet",
       name: "Sangeet",
       dateLabel: "March 9, 2027",
@@ -85,36 +70,6 @@ export const weddingData = {
       attire: "Attire: Festive glam/Bollywood chic (comfortable shoes recommended).",
       motif: "sangeet" as const,
       icon: "music",
-    },
-    {
-      id: "pellikoduku-pellikuthuru",
-      name: "Pellikoduku & Pellikuthuru",
-      dateLabel: "March 10, 2027",
-      time: "9:30 AM",
-      venue: "316 Parkwood Dr",
-      location: "Aubrey, Texas",
-      address: "316 Parkwood Dr, Lakewood Village, TX 75068",
-      mapsQuery: "316 Parkwood Dr, Lakewood Village, TX 75068",
-      description:
-        "Traditional Telugu pre-wedding rituals with family blessings, sacred customs, and meaningful moments for both bride and groom.",
-      attire: "Attire: Traditional Indian wear is recommended.",
-      motif: "pellikuthuru" as const,
-      icon: "bell",
-    },
-    {
-      id: "haldi",
-      name: "Haldi",
-      dateLabel: "March 10, 2027",
-      time: "After Pellikoduku & Pellikuthuru",
-      venue: "316 Parkwood Dr",
-      location: "Aubrey, Texas",
-      address: "316 Parkwood Dr, Lakewood Village, TX 75068",
-      mapsQuery: "316 Parkwood Dr, Lakewood Village, TX 75068",
-      description:
-        "A vibrant turmeric ceremony filled with laughter, blessings, and a joyful chapter of our wedding celebrations.",
-      attire: "Attire: Shades of mint and sage green are encouraged.",
-      motif: "haldi" as const,
-      icon: "turmeric",
     },
     {
       id: "wedding",
@@ -278,14 +233,6 @@ export const weddingData = {
       mapsQuery: "The Bliss at Aubrey, Aubrey, Texas",
       note: "Sangeet venue.",
     },
-    {
-      id: "airbnb-lakewood-village",
-      name: "Pre Wedding Events",
-      fullAddress: "316 Parkwood Dr, Lakewood Village, TX 75068",
-      location: "Lakewood Village, Texas",
-      mapsQuery: "316 Parkwood Dr, Lakewood Village, TX 75068",
-      note: "Haldi, Mehendi, and Pellikoduku & Pellikuthuru venue.",
-    },
   ],
 
   rsvp: {
@@ -299,10 +246,7 @@ export const weddingData = {
      */
     endpoint: "",
     events: [
-      { id: "mehendi", label: "Mehendi" },
       { id: "sangeet", label: "Sangeet" },
-      { id: "haldi", label: "Haldi" },
-      { id: "pellikoduku-pellikuthuru", label: "Pellikoduku & Pellikuthuru" },
       { id: "wedding", label: "Wedding Ceremony" },
     ],
   },
