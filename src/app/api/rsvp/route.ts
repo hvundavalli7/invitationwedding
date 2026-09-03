@@ -123,7 +123,7 @@ export async function POST(request: Request) {
 
   let databaseSaved = !capabilities.database;
   let sheetsSaved = !capabilities.sheets;
-  let emailSent = !capabilities.email;
+  let emailSent = !capabilities.email || Boolean(capabilities.sheets);
   let emailError: unknown;
 
   if (capabilities.database) {
@@ -152,7 +152,7 @@ export async function POST(request: Request) {
     }
   }
 
-  if (capabilities.email) {
+  if (capabilities.email && !capabilities.sheets) {
     try {
       await sendRsvpEmails({
         email,
@@ -175,7 +175,7 @@ export async function POST(request: Request) {
     return Response.json({
       ok: true,
       database: capabilities.database,
-      email: capabilities.email,
+      email: capabilities.email && !capabilities.sheets,
       sheets: capabilities.sheets,
     });
   }
@@ -186,7 +186,9 @@ export async function POST(request: Request) {
       database: capabilities.database,
       email: false,
       sheets: capabilities.sheets,
-      warning: "RSVP was saved, but the confirmation email could not be sent.",
+      warning: capabilities.sheets
+        ? "RSVP was saved to Google Sheets, and email delivery was skipped because Sheets is configured."
+        : "RSVP was saved, but the confirmation email could not be sent.",
     });
   }
 

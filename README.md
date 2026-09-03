@@ -28,8 +28,9 @@ Edit **`src/data/wedding.ts`** for names, dates, venues, copy, RSVP settings, ga
 - RSVP submissions can be routed three ways:
   - Leave `weddingData.rsvp.endpoint` empty and it will fall back to FormSubmit from the browser
   - Set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` to save every RSVP into the Supabase `rsvps` table
-  - Set `RESEND_API_KEY` (+ optional `RSVP_NOTIFY_EMAIL`, `RSVP_FROM_EMAIL`) to keep the email-based RSVP flow
-  - With both configured, the API writes to the database and sends the email confirmation
+  - Set `GOOGLE_SHEETS_WEBHOOK_URL` to send RSVPs to Google Sheets; if this is configured, it takes priority over email delivery
+  - Set `RESEND_API_KEY` (+ optional `RSVP_NOTIFY_EMAIL`, `RSVP_FROM_EMAIL`) for email fallback when Sheets is not configured
+  - With both Sheets and email configured, the API writes to Sheets and skips the email confirmation
 - Update venue `fullAddress` fields once street addresses are verified
 
 ## Scripts
