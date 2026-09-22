@@ -31,8 +31,6 @@ export default function VenueMap() {
                   <a
                     className={styles.stretchLink}
                     href={mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     aria-label={`Open ${venue.name} in Google Maps`}
                   />
                   <h3>{venue.name}</h3>

@@ -74,8 +74,6 @@ export default function WeddingDetails() {
                       key={stay.name}
                       className={styles.accommodationLink}
                       href={mapsSearchUrl(stay.query)}
-                      target="_blank"
-                      rel="noopener noreferrer"
                     >
                       <span className={styles.linkTitle}>{stay.name}</span>
                       <span className={styles.linkAddress}>{stay.fullAddress}</span>
