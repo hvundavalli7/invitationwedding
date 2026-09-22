@@ -309,7 +309,7 @@ export type FavoritePerson = {
 export type WeddingData = typeof weddingData;
 
 export function mapsSearchUrl(query: string) {
-  // Use a plain web URL so mobile browsers open the map page directly
-  // instead of steering users toward app-install deep-link flows.
-  return `https://www.google.com/maps?q=${encodeURIComponent(query)}`;
+  // Use Google's map-search web results page instead of direct maps deep links.
+  // This is more reliable on phones without the Maps app installed.
+  return `https://www.google.com/search?tbm=map&q=${encodeURIComponent(query)}`;
 }
