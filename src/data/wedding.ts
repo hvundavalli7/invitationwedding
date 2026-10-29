@@ -237,7 +237,7 @@ export const weddingData = {
 
   rsvp: {
     title: "RSVP",
-    subtitle: "We joyfully request the honour of your presence. Please RSVP by November 1, 2026.",
+    subtitle: "We joyfully request the honour of your presence. Please RSVP by December 15th, 2026.",
     confirmation:
       "Thank you! Your RSVP has been received. We cannot wait to celebrate with you.",
     /**
